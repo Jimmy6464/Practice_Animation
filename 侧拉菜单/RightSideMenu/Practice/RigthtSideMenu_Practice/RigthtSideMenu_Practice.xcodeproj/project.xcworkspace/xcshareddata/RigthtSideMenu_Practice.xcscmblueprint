@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "846BE617AA9E74C124CCAACA9AE4C37BCADD90D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "846BE617AA9E74C124CCAACA9AE4C37BCADD90D2" : 0,
+    "30BE947CDF77FD622D354EA8E068C2E029320682" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "987B95CB-A4BA-4DD7-93EA-6141C1B3BC26",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "846BE617AA9E74C124CCAACA9AE4C37BCADD90D2" : "RightSideMenu\/",
+    "30BE947CDF77FD622D354EA8E068C2E029320682" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RigthtSideMenu_Practice",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Practice\/RigthtSideMenu_Practice\/RigthtSideMenu_Practice.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Jimmy6464\/Practice_Animation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30BE947CDF77FD622D354EA8E068C2E029320682"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/romaonthego\/REFrostedViewController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "846BE617AA9E74C124CCAACA9AE4C37BCADD90D2"
+    }
+  ]
+}

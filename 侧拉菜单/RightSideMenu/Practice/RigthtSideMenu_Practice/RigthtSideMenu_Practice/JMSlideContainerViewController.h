@@ -12,7 +12,7 @@
 
 @interface JMSlideContainerViewController : UIViewController
 @property (nonatomic, strong) UIImage *screenshotImage;
-@property (nonatomic, weak, readwrite) JMSlideContainerViewController *slideViewController;
+@property (nonatomic, weak, readwrite) JMSlideMainViewController *slideViewController;
 @property (nonatomic, assign) BOOL animateApperance;
 @property (nonatomic, strong, readonly) UIView *containerView;
 
