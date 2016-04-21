@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JMNavigationController.h"
+#import "JMHomeViewController.h"
+#import "JMMenuViewContorller.h"
 @interface AppDelegate ()
 
 @end
@@ -17,9 +19,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //create content and menu controller
+    JMHomeViewController *home = [JMHomeViewController new];
+    JMNavigationController *navigationVC = [[JMNavigationController alloc]initWithRootViewController:home];
+    JMMenuViewContorller *menuVC = [JMMenuViewContorller new];
+    
+    //create slide view controller
+    JMSlideMainViewController *slideVC = [JMSlideMainViewController slideMainWithContentViewController:navigationVC andMenuViewController:menuVC];
+    slideVC.direction = FrostedViewConrtollerDirectionLeft ;
+    slideVC.liveBlurBackgroundStyle = FrostedViewControllerLiveBackgroundStyleLight;
+    slideVC.liveBlur = YES;
+    slideVC.delegate = self;
+    
+    //make it a root controller
+    self.window.rootViewController = slideVC;
     return YES;
 }
-
+#pragma mark - JMSlideMainViewControllerDelgate
+- (void)frostedViewConfroller:(JMSlideMainViewController *)slideMainViewController didRecognizePanGesture:(UIPanGestureRecognizer *)recognizer
+{
+    NSLog(@"panGesture");
+}
+- (void)frostedViewConfroller:(JMSlideMainViewController *)slideMainViewController willShowMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"will show menu");
+}
+- (void)frostedViewConfroller:(JMSlideMainViewController *)slideMainViewController didShowMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"did show menu");
+}
+-(void)frostedViewConfroller:(JMSlideMainViewController *)slideMainViewController willHideMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"will hide menu");
+}
+- (void)frostedViewConfroller:(JMSlideMainViewController *)slideMainViewController didHideMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"did hide menu");
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

@@ -33,9 +33,10 @@ typedef NS_ENUM(NSInteger, FrostedViewControllerLiveBackgroundStyle) {
 @interface JMSlideMainViewController : UIViewController
 @property (nonatomic, strong) UIViewController *contentViewController;
 @property (nonatomic, strong) UIViewController *menuViewController;
-@property (nonatomic, strong,readonly) UIPanGestureRecognizer *panGestureRecongnizer;
+@property (nonatomic, strong,readonly) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic, assign) BOOL panGestureEnabled;
 @property (nonatomic, assign) FrostedViewConrtollerDirection direction;
+@property (nonatomic, assign, readwrite) CGSize calculateMenuViewSize;//decide the size of menuview
 /*
  The backgrounFadeAmount is how much the background view fades when the menu view is presented
  1.0 is completely black.0.0 means the background does not dim at all

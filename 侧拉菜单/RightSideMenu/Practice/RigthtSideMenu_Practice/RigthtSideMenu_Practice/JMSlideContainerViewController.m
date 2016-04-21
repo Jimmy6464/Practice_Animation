@@ -17,9 +17,7 @@
 @end
 
 @interface JMSlideMainViewController ()
-
 @property (nonatomic, assign) BOOL visible;
-@property (nonatomic, assign) CGSize calculatedMenuViewSize;
 @end
 @implementation JMSlideContainerViewController
 - (void)viewDidLoad
@@ -53,7 +51,7 @@
         [self.slideViewController.menuViewController didMoveToParentViewController:self];
     }
     
-    [self.view addGestureRecognizer:self.slideViewController.panGestureRecongnizer];
+    [self.view addGestureRecognizer:self.slideViewController.panGestureRecognizer];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -65,18 +63,18 @@
         self.slideViewController.menuViewController.view.frame = self.containerView.bounds;
         
         if (self.slideViewController.direction == FrostedViewConrtollerDirectionLeft) {
-            [self setContainerFrame:CGRectMake(-self.view.frame.size.width, 0, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(-self.view.frame.size.width, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
         }
         if (self.slideViewController.direction == FrostedViewConrtollerDirectionRight) {
-            [self setContainerFrame:CGRectMake(self.view.frame.size.width, 0, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(self.view.frame.size.width, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
         }
         
         if (self.slideViewController.direction == FrostedViewConrtollerDirectionBottom) {
-            [self setContainerFrame:CGRectMake(0, self.view.frame.size.height, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(0, self.view.frame.size.height, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
         }
         
         if (self.slideViewController.direction == FrostedViewConrtollerDirectionTop) {
-            [self setContainerFrame:CGRectMake(0, self.slideViewController.calculatedMenuViewSize.height, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(0, self.slideViewController.calculateMenuViewSize.height, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
         }
         
         if (self.animateApperance) {
@@ -147,26 +145,26 @@
     
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionLeft) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(0, 0, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(0, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
         } completion:completionHandler];
     }
     
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionRight) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(self.view.frame.size.width - self.slideViewController.calculatedMenuViewSize.width, 0, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(self.view.frame.size.width - self.slideViewController.calculateMenuViewSize.width, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
         } completion:completionHandler];
     }
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionTop) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(0, 0, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(0, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
         } completion:completionHandler];
     }
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionBottom) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(0, self.view.frame.size.height - self.slideViewController.calculatedMenuViewSize.height, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(0, self.view.frame.size.height - self.slideViewController.calculateMenuViewSize.height, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
         } completion:completionHandler];
     }
@@ -190,7 +188,7 @@
     //follow the direction
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionLeft) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(- self.slideViewController.calculatedMenuViewSize.width, 0, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(- self.slideViewController.calculateMenuViewSize.width, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:0];
         } completion:^(BOOL finished){
             self.slideViewController.visible = NO;
@@ -201,7 +199,7 @@
     
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionRight) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(self.view.frame.size.width, 0, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(self.view.frame.size.width, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:0];
         } completion:^(BOOL finished){
             self.slideViewController.visible = NO;
@@ -212,7 +210,7 @@
     
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionTop) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(0, -self.slideViewController.calculatedMenuViewSize.height, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(0, -self.slideViewController.calculateMenuViewSize.height, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:0];
         } completion:^(BOOL finished){
             self.slideViewController.visible = NO;
@@ -223,7 +221,7 @@
     
     if (self.slideViewController.direction == FrostedViewConrtollerDirectionBottom) {
         [UIView animateWithDuration:self.slideViewController.animationDuration animations:^{
-            [self setContainerFrame:CGRectMake(0, self.view.frame.size.height, self.slideViewController.calculatedMenuViewSize.width, self.slideViewController.calculatedMenuViewSize.height)];
+            [self setContainerFrame:CGRectMake(0, self.view.frame.size.height, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
             [self setBackgroundViewsAlpha:0];
         } completion:^(BOOL finished){
             self.slideViewController.visible = NO;
@@ -267,7 +265,7 @@
                     frame.origin.x = 0;
                     
                     if (!self.slideViewController.limitedMenuViewSize) {
-                        frame.size.width = self.slideViewController.calculatedMenuViewSize.width + self.containerOrigin.x + point.x;
+                        frame.size.width = self.slideViewController.calculateMenuViewSize.width + self.containerOrigin.x + point.x;
                         if (frame.size.width > self.view.frame.size.width) {
                             frame.size.width = self.view.frame.size.width;
                         }
@@ -276,8 +274,8 @@
                 break;
             case FrostedViewConrtollerDirectionRight:
                 frame.origin.x = self.containerOrigin.x + point.x;
-                if (frame.origin.x < self.view.frame.size.width - self.slideViewController.calculatedMenuViewSize.width ) {
-                    frame.origin.x = self.view.frame.size.width - self.slideViewController.calculatedMenuViewSize.width;
+                if (frame.origin.x < self.view.frame.size.width - self.slideViewController.calculateMenuViewSize.width ) {
+                    frame.origin.x = self.view.frame.size.width - self.slideViewController.calculateMenuViewSize.width;
                     
                     if (!self.slideViewController.limitedMenuViewSize) {
                         frame.origin.x = self.containerOrigin.x + point.x;
@@ -289,16 +287,100 @@
                 }
                 break;
             case FrostedViewConrtollerDirectionTop:
-                
+                frame.origin.y = self.containerOrigin.y+point.y;
+                if (frame.origin.y > 0 ) {
+                    frame.origin.y = 0;
+                    if (!self.slideViewController.limitedMenuViewSize) {
+                        frame.size.height = self.slideViewController.calculateMenuViewSize.height + self.containerOrigin.y + point.y;
+                        if (frame.size.height > self.view.frame.size.height) {
+                            frame.size.height = self.view.frame.size.height;
+                        }
+                    }
+                }
                 break;
             case FrostedViewConrtollerDirectionBottom:
-                
+                frame.origin.y = self.containerOrigin.y + point.y;
+                if (frame.origin.y < self.view.frame.size.height - self.slideViewController.calculateMenuViewSize.height) {
+                    frame.origin.y = self.view.frame.size.height - self.slideViewController.calculateMenuViewSize.height;
+                    if (!self.slideViewController.limitedMenuViewSize) {
+                        frame.origin.y = self.containerOrigin.y + point.y;
+                        if (frame.origin.y < 0) {
+                            frame.origin.y = 0;
+                        }
+                        frame.size.height = self.view.frame.size.height - frame.origin.y;
+                    }
+                }
                 break;
             default:
                 break;
         }
         
+        [self setContainerFrame:frame];
     }
     
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        switch (self.slideViewController.direction) {
+            case FrostedViewConrtollerDirectionLeft:
+                if ([recognizer velocityInView:self.view].x < 0) {
+                    [self show];
+                }else {
+                    [self hide];
+                }
+                break;
+            case FrostedViewConrtollerDirectionRight:
+                if ([recognizer velocityInView:self.view].x < 0) {
+                    [self show];
+                }else {
+                    [self hide];
+                }
+                break;
+            case FrostedViewConrtollerDirectionTop:
+                if ([recognizer velocityInView:self.view].y < 0) {
+                    [self show];
+                }else {
+                    [self hide];
+                }
+                break;
+            case FrostedViewConrtollerDirectionBottom:
+                if ([recognizer velocityInView:self.view].y < 0) {
+                    [self show];
+                }else {
+                    [self hide];
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
+
+- (void)fixLayoutWithDuration:(NSTimeInterval)duration
+{
+    switch (self.slideViewController.direction) {
+        case FrostedViewConrtollerDirectionLeft:
+            [self setContainerFrame:CGRectMake(0, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
+            [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
+            break;
+        case FrostedViewConrtollerDirectionRight:
+            [self setContainerFrame:CGRectMake(self.view.frame.size.width -  self.slideViewController.calculateMenuViewSize.width, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
+            [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
+            break;
+        case FrostedViewConrtollerDirectionTop:
+            [self setContainerFrame:CGRectMake(0, 0, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
+            [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
+            break;
+        case FrostedViewConrtollerDirectionBottom:
+            [self setContainerFrame:CGRectMake(0, self.view.frame.size.height -  self.slideViewController.calculateMenuViewSize.height, self.slideViewController.calculateMenuViewSize.width, self.slideViewController.calculateMenuViewSize.height)];
+            [self setBackgroundViewsAlpha:self.slideViewController.backgroudFadeAmount];
+            break;
+        default:
+            break;
+    }
+}
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self fixLayoutWithDuration:duration];
 }
 @end

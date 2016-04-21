@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class JMSlideMainViewController;
+#import "JMSlideMainViewController.h"
+
 @interface UIViewController (JMSlideMainViewController)
 @property (nonatomic, strong, readonly) JMSlideMainViewController *slideViewController;
 - (void)re_displayController:(UIViewController *)controller frame:(CGRect)frame;

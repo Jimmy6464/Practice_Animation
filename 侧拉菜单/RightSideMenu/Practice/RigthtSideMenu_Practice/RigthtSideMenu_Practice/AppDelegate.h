@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "JMSlideMainViewController.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate,JMSlideMainViewControllerDelgate>
 
 @property (strong, nonatomic) UIWindow *window;
 

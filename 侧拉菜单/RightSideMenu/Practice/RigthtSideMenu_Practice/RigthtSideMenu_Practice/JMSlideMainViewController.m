@@ -18,9 +18,9 @@
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, assign) BOOL visible;
 @property (nonatomic, strong, readwrite) JMSlideContainerViewController *containerViewController;
-@property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
+//@property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic, assign) BOOL  automaticSize;
-@property (nonatomic, assign) CGSize calculateMenuViewSize;//decide the size of menuview
+
 @end
 
 @implementation JMSlideMainViewController
@@ -34,10 +34,11 @@
     }
     return self;
 }
+
 - (void)initializeSubviews
 {
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprcated-declarations"
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     self.wantsFullScreenLayout = YES;
 #pragma clang diagnostic pop
     _panGestureEnabled = YES;
@@ -45,6 +46,7 @@
     _backgroudFadeAmount = 0.3f;
     _blurTintColor = JMUIKitIsFlatMode() ? nil : [UIColor colorWithWhite:1 alpha:0.75f];
     _blurSaturationDeltaFactor =  1.8f;
+    _containerViewController = [[JMSlideContainerViewController alloc]init];
     _containerViewController.slideViewController = self;
     _menuViewSize = CGSizeZero;
     _liveBlur = JMUIKitIsFlatMode();
@@ -59,10 +61,11 @@
 }
 - (instancetype)initWithContentViewController:(UIViewController *)contentViewController andMenuViewController:(UIViewController *)menuViewController
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         _contentViewController = contentViewController;
         _menuViewController = menuViewController;
+
     }
     return self;
 }
@@ -134,7 +137,7 @@
 #pragma mark  - public methods
 - (void)presentMenuViewController
 {
-
+    [self presentMenuViewControllerWithAnimatedApperance:YES];
 }
 - (void)presentMenuViewControllerWithAnimatedApperance:(BOOL)animateApperance
 {

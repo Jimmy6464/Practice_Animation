@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1594D61CC873F0003EF836 /* JMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1594D51CC873F0003EF836 /* JMHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BF1594D91CC87406003EF836 /* JMMenuViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1594D81CC87406003EF836 /* JMMenuViewContorller.m */; settings = {ASSET_TAGS = (); }; };
+		BF1594DC1CC87422003EF836 /* JMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1594DB1CC87422003EF836 /* JMNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		BF1594DF1CC8743F003EF836 /* JMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1594DE1CC8743F003EF836 /* JMSecondViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF6FB8F01CC5C84E00F60AFD /* UIView+JMFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6FB8EF1CC5C84E00F60AFD /* UIView+JMFrostedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF6FB8F31CC61A8A00F60AFD /* UIImage+JMFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6FB8F21CC61A8A00F60AFD /* UIImage+JMFrostedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF6FB8F51CC626AE00F60AFD /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6FB8F41CC626AE00F60AFD /* Accelerate.framework */; };
@@ -41,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF1594D41CC873F0003EF836 /* JMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHomeViewController.h; sourceTree = "<group>"; };
+		BF1594D51CC873F0003EF836 /* JMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHomeViewController.m; sourceTree = "<group>"; };
+		BF1594D71CC87406003EF836 /* JMMenuViewContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMenuViewContorller.h; sourceTree = "<group>"; };
+		BF1594D81CC87406003EF836 /* JMMenuViewContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMenuViewContorller.m; sourceTree = "<group>"; };
+		BF1594DA1CC87422003EF836 /* JMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNavigationController.h; sourceTree = "<group>"; };
+		BF1594DB1CC87422003EF836 /* JMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNavigationController.m; sourceTree = "<group>"; };
+		BF1594DD1CC8743F003EF836 /* JMSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSecondViewController.h; sourceTree = "<group>"; };
+		BF1594DE1CC8743F003EF836 /* JMSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSecondViewController.m; sourceTree = "<group>"; };
 		BF6FB8EE1CC5C84E00F60AFD /* UIView+JMFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMFrostedViewController.h"; sourceTree = "<group>"; };
 		BF6FB8EF1CC5C84E00F60AFD /* UIView+JMFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMFrostedViewController.m"; sourceTree = "<group>"; };
 		BF6FB8F11CC61A8A00F60AFD /* UIImage+JMFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JMFrostedViewController.h"; sourceTree = "<group>"; };
@@ -96,6 +108,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1594D31CC8734F003EF836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF1594D41CC873F0003EF836 /* JMHomeViewController.h */,
+				BF1594D51CC873F0003EF836 /* JMHomeViewController.m */,
+				BF1594D71CC87406003EF836 /* JMMenuViewContorller.h */,
+				BF1594D81CC87406003EF836 /* JMMenuViewContorller.m */,
+				BF1594DA1CC87422003EF836 /* JMNavigationController.h */,
+				BF1594DB1CC87422003EF836 /* JMNavigationController.m */,
+				BF1594DD1CC8743F003EF836 /* JMSecondViewController.h */,
+				BF1594DE1CC8743F003EF836 /* JMSecondViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		BFDAFDDB1CC4BEFF00368934 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +147,7 @@
 		BFDAFDE61CC4BEFF00368934 /* RigthtSideMenu_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				BF1594D31CC8734F003EF836 /* Controller */,
 				BFDAFE1A1CC4BF3F00368934 /* Slide */,
 				BFDAFDEA1CC4BEFF00368934 /* AppDelegate.h */,
 				BFDAFDEB1CC4BEFF00368934 /* AppDelegate.m */,
@@ -314,8 +342,12 @@
 				BFDAFDE91CC4BEFF00368934 /* main.m in Sources */,
 				BF6FB8F01CC5C84E00F60AFD /* UIView+JMFrostedViewController.m in Sources */,
 				BFDAFE1D1CC4BFA100368934 /* JMSlideMainViewController.m in Sources */,
+				BF1594DF1CC8743F003EF836 /* JMSecondViewController.m in Sources */,
 				BFDAFE261CC4D99300368934 /* JMSlideContainerViewController.m in Sources */,
 				BFDAFE201CC4CE4A00368934 /* UIViewController+JMSlideMainViewController.m in Sources */,
+				BF1594D61CC873F0003EF836 /* JMHomeViewController.m in Sources */,
+				BF1594D91CC87406003EF836 /* JMMenuViewContorller.m in Sources */,
+				BF1594DC1CC87422003EF836 /* JMNavigationController.m in Sources */,
 				BF6FB8F31CC61A8A00F60AFD /* UIImage+JMFrostedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
